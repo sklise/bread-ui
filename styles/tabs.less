@@ -6,10 +6,18 @@
 // Overrides: atom/tabs
 
 .tab-bar {
+  display: flex;
+  align-items: stretch;
   background-color: @tab-bar-background-color;
-  border-bottom: 1px solid @base-border-color;
+  border-bottom: 0px solid @base-border-color;
+
+  .nuclide-workspace-views-panel-location-tabs-hide-button-wrapper {
+    display: none;
+  }
 
   .tab {
+    flex: 1;
+    max-width: 100%;
     color: @text-color;
     height: @tab-height;
     line-height: @tab-height;
@@ -18,9 +26,15 @@
     background-color: @tab-background-color;
     &.active {
       color: @text-color-selected;
+      color: @tab-active-color;
       background-color: @tab-background-color-active;
+      flex: 1;
     }
 
+
+    .title {
+      text-align: center;
+    }
 
     // Modified Icon (the blue circle) -------------------
     &.modified:not(:hover) .close-icon {
@@ -53,5 +67,9 @@
         visibility: hidden;
       }
     }
+  }
+
+  .tab[data-type='FileTreeSidebarComponent'] {
+    background-color: @tab-background-color;
   }
 }

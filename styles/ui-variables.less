@@ -10,10 +10,11 @@
 // Try to edit some of the values below to see your theme change.
 // A good start is to change the color of the `@base-background-color` variable.
 
+@import "syntax-variables";
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
-@text-color-subtle:    hsl(0,0%,50%);
+@text-color:           hsl(0,0%,86%);
+@text-color-subtle:    hsl(0,0%,60%);
 @text-color-highlight: hsl(0,0%,94%);
 @text-color-selected:  hsl(0,0%,100%);
 
@@ -33,11 +34,11 @@
 @app-background-color:       darken(@base-background-color, 5%);
 
 // Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: hsl(0,0%,9%);
+@base-border-color:     @base-background-color;
 
 // Component colors
-@pane-item-background-color: @base-background-color;
+@pane-item-background-color: lighten(@base-background-color, 5%);
 @pane-item-border-color:     @base-border-color;
 
 @input-background-color: @app-background-color;
@@ -46,7 +47,7 @@
 @tool-panel-background-color: @base-background-color;
 @tool-panel-border-color:     @base-border-color;
 
-@inset-panel-background-color: lighten(@base-background-color, 4%);
+@inset-panel-background-color: @base-background-color;
 @inset-panel-border-color:     @base-border-color;
 
 @panel-heading-background-color: lighten(@base-background-color, 4%);
@@ -64,6 +65,8 @@
 @tab-bar-border-color:        @base-border-color;
 @tab-background-color:        @tab-bar-background-color;
 @tab-background-color-active: lighten(@tab-bar-background-color, 10%);
+@tab-background-color-active: @syntax-background-color;
+@tab-active-color:            @syntax-text-color;
 @tab-border-color:            @base-border-color;
 
 @tree-view-background-color: @base-background-color;
@@ -91,4 +94,4 @@
 
 // Misc
 @component-border-radius: 2px;
-@font-family: '.SFNSText-Regular', 'SF UI Text', 'Lucida Grande', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
+@font-family: 'SFMono-Regular', '.SFNSText-Regular', 'SF UI Text', 'Segoe UI', Ubuntu, Cantarell, sans-serif;
