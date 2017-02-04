@@ -2,4 +2,12 @@
 
 My nickname is bread and this is my ui-theme for atom. Nothing about the way it looks makes me think about bread.
 
-![A screenshot of your theme](https://cloud.githubusercontent.com/assets/378023/8842525/4215f26c-3136-11e5-9d94-d2c078a05d24.png)
+![screenshot of bread-ui](https://cloud.githubusercontent.com/assets/2559233/22618902/a10f2bae-eab6-11e6-9322-03f1bbeec304.png)
+
+It is a:
+
+- dark ui with reasonable contrast
+- tries to use the San Francisco Monospace font
+  - [import-sf-mono](https://atom.io/packages/import-sf-mono) shows you where the source files are
+  - muhasturk/SFMono offers downloads of the fonts files
+- is otherwise pretty similar to the atom-community/ui-theme-template
